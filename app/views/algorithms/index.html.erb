@@ -1,0 +1,43 @@
+<h1>Listing algorithms</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Identifier</th>
+    <th>Type</th>
+    <th>Subtype</th>
+    <th>Fault class</th>
+    <th>Title</th>
+    <th>Detections to verify</th>
+    <th>Detection checks until reset</th>
+    <th>Detection enabled</th>
+    <th>Response enabled</th>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @algorithms.each do |algorithm| %>
+  <tr>
+    <td><%= algorithm.name %></td>
+    <td><%= algorithm.identifier %></td>
+    <td><%= algorithm.type %></td>
+    <td><%= algorithm.subtype %></td>
+    <td><%= algorithm.fault_class %></td>
+    <td><%= algorithm.title %></td>
+    <td><%= algorithm.detections_to_verify %></td>
+    <td><%= algorithm.detection_checks_until_reset %></td>
+    <td><%= algorithm.detection_enabled %></td>
+    <td><%= algorithm.response_enabled %></td>
+    <td><%= algorithm.description %></td>
+    <td><%= link_to 'Show', algorithm %></td>
+    <td><%= link_to 'Edit', edit_algorithm_path(algorithm) %></td>
+    <td><%= link_to 'Destroy', algorithm, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Algorithm', new_algorithm_path %>

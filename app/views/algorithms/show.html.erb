@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @algorithm.name %>
+</p>
+
+<p>
+  <b>Identifier:</b>
+  <%= @algorithm.identifier %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%= @algorithm.type %>
+</p>
+
+<p>
+  <b>Subtype:</b>
+  <%= @algorithm.subtype %>
+</p>
+
+<p>
+  <b>Fault class:</b>
+  <%= @algorithm.fault_class %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @algorithm.title %>
+</p>
+
+<p>
+  <b>Detections to verify:</b>
+  <%= @algorithm.detections_to_verify %>
+</p>
+
+<p>
+  <b>Detection checks until reset:</b>
+  <%= @algorithm.detection_checks_until_reset %>
+</p>
+
+<p>
+  <b>Detection enabled:</b>
+  <%= @algorithm.detection_enabled %>
+</p>
+
+<p>
+  <b>Response enabled:</b>
+  <%= @algorithm.response_enabled %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @algorithm.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_algorithm_path(@algorithm) %> |
+<%= link_to 'Back', algorithms_path %>

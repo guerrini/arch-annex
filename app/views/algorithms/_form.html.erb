@@ -1,0 +1,21 @@
+<%= simple_form_for(@algorithm) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :identifier %>
+    <%= f.input :type %>
+    <%= f.input :subtype %>
+    <%= f.input :fault_class %>
+    <%= f.input :title %>
+    <%= f.input :detections_to_verify %>
+    <%= f.input :detection_checks_until_reset %>
+    <%= f.input :detection_enabled %>
+    <%= f.input :response_enabled %>
+    <%= f.input :description %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
